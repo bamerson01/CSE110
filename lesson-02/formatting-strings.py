@@ -5,3 +5,6 @@ output = 'Your name is {1}, {0} {1}.'.format(
     first_name.capitalize(), last_name.capitalize())
 
 print(output)
+
+# ftest = f'Your name is {first_name}'
+# print(ftest)
