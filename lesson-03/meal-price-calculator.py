@@ -28,7 +28,7 @@ total_msg = f'Subtotal: ${subtotal}\nSales Tax: ${sales_tax}\nTotal: ${total}'
 print(total_msg)
 print()
 
-# prompt user with tip pecentages and ask how much of a tip they will pay.
+# prompt user with tip pecentage suggestions and ask how much of a tip they will pay.
 tip_sugg = f'Tip suggestions: 20%: ${twenty_tip} 18%: ${eighteen_tip}  15%: ${fifteen_tip}'
 print(tip_sugg)
 tip = float(input('Tip ammount? '))
@@ -40,6 +40,7 @@ new_total_msg = f'Subtotal: ${subtotal}\nTip: ${tip}\nSales Tax: ${sales_tax}\nT
 print(new_total_msg)
 print()
 
+# prompt user for ammount they paid and calculate change due.
 amount_paid = float(input('Total amount paid? '))
 change = amount_paid - new_total
 change_msg = f'Change due: ${change}'
