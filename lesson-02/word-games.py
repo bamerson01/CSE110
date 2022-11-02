@@ -1,6 +1,6 @@
 # This program asks the user for a series of words and then displays the story with the user's words inserted into the appropriate places.
 
-# Ask user for various words. Words stored in variables to use in story
+# Ask user for various words. Words are then stored in variables to use in story
 print('Please enter the following:')
 adjective = input('adjective: ')
 animal = input('animal: ')
@@ -13,14 +13,14 @@ nickname = input('nickname: ')
 city = input('city: ')
 noun = input('thing: ')
 
-# check if starts with vowel to determine if word should have 'a' or 'an' before the word
+# check if the input for noun starts with a vowel to determine if word should have 'a' or 'an' before the word
 if noun[0].lower() in ['a', 'e', 'i', 'o', 'u']:
     is_vowel = 'an'
 else:
     is_vowel = 'a'
 
 
-# this function determine if verb should have the word 'to' before it. Checks if verb is greater than 5 characters to prevent false positives with words such as sing, bring, etc. If verb ends with the suffix "ing" and greater than 5 character we will add the word 'to' before the verb
+# this function determines if verb should have the word 'to' before it. Checks if verb is greater than 5 characters to prevent false positives with words such as sing, bring, etc. If verb does not end with the suffix "ing" and greater than 5 character we will add the word 'to' before the verb
 
 def add_to(verb):
     if len(verb) > 4 and (verb).endswith('ing'):
