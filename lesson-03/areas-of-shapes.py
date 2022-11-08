@@ -14,8 +14,8 @@ import math
 
 # Area of a square - prompts user for length of a side, then multiplies it by itself, then outputs the solution
 square_length = float(input('What is the length of a side of the square? '))
-square_area = square_length**2
-square_cubed = square_length**3
+square_area = square_length ** 2
+square_cubed = square_length ** 3
 square_response = f'The area of the square is: {square_area}\nThe cubic volume of the square is: {square_cubed}'
 print(square_response)
 print()
@@ -23,7 +23,7 @@ print()
 # Area of a rectangle - prompts user for the length and width of the rectangle, multiplies the length and width, then outputs solution
 rectangle_length = float(input('What is the length of rectangle? '))
 rectangle_width = float(input('What is the width of the rectangle?'))
-rectangle_area = rectangle_length*rectangle_width
+rectangle_area = rectangle_length * rectangle_width
 rectangle_response = f'The area of the rectangle is: {rectangle_area}'
 print(rectangle_response)
 print()
@@ -31,8 +31,9 @@ print()
 # Area of a circle - prompts user for the radius of the circle, multiplies radius by pi 3.14, outputs solution
 circle_radius = float(input('What is the radius of the circle? '))
 circle_area = (circle_radius ** 2) * math.pi
-circle_response = f'The area of the circle is: {circle_area}'
+sphere_volume = (4/3) * math.pi * (circle_radius ** 3)
+circle_response = f'The area of the circle is: {circle_area}\nThe volume of a sphere is: {sphere_volume}'
 print(circle_response)
 
 # circumference = 2πr
-# circle_circumference = 2*math.pi*float(circle_radius)
+# sphere volume = V = ⁴⁄₃πr³
