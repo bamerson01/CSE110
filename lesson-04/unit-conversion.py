@@ -3,7 +3,7 @@
 # What is the temperature in Fahrenheit? 81
 # The temperature in Celsius is 27.2 degrees.
 
-temp_f = int(input('What is the temperature in Fahrenheit?: '))
-temp_c = (temp_f - 32) * (5/9)
-temp_answer = f'The temperature in Celsius is {temp_c:.1f} degrees.'
-print(temp_answer)
+temperature_f = int(input('What is the temperature in Fahrenheit?: '))
+temperature_c = (temperature_f - 32) * (5/9)
+temperature_answer = f'The temperature in Celsius is {temperature_c:.1f} degrees.'
+print(temperature_answer)
