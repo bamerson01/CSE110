@@ -11,24 +11,10 @@
 can_ride = False
 
 first_rider_age = int(input('What is age of the first rider? '))
-
-if first_rider_age >= 12 and first_rider_age <= 17:
-    first_rider_golden_pass = input('Do you have a golden pass?(yes/no) ')
-    if first_rider_golden_pass.lower() == 'yes':
-        first_rider_age = 18
-    else:
-        first_rider_height = int(
-            input('What is the height of the first rider? '))
-else:
-    first_rider_height = int(input('What is the height of the first rider? '))
-
-if first_rider_height < 36:
-    can_ride = False
-else:
-    is_second_rider = input('Is there a second rider (yes/no)? ')
-    if is_second_rider.lower() == 'no' and
-    second_rider_age = input('What is the age of the second rider? ')
-    second_rider_height = input('What is the height of the second rider? ')
+first_rider_height = int(input('What is the height of the first rider? '))
+is_second_rider = input('Is there a second rider (yes/no)? ')
+second_rider_age = input('What is the age of the second rider? ')
+second_rider_height = input('What is the height of the second rider? ')
 
 
 if can_ride:
