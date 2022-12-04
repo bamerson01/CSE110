@@ -11,11 +11,29 @@
 can_ride = False
 
 first_rider_age = int(input('What is age of the first rider? '))
+if first_rider_age >= 12 and first_rider_age <= 17:
+    golden_passport = input('Do you have a golden passport?(yes/no) ')
+    if golden_passport.lower() == 'yes':
+        first_rider_age = 18
 first_rider_height = int(input('What is the height of the first rider? '))
 is_second_rider = input('Is there a second rider (yes/no)? ')
-second_rider_age = input('What is the age of the second rider? ')
-second_rider_height = input('What is the height of the second rider? ')
-
+if is_second_rider.lower() == 'yes':
+    second_rider_age = int(input('What is the age of the second rider? '))
+    second_rider_height = int(
+        input('What is the height of the second rider? '))
+    if first_rider_height < 36 or second_rider_height < 36:
+        can_ride = False
+    elif first_rider_age < 18 and second_rider_age < 18:
+        can_ride = False
+    else:
+        can_ride = True
+elif is_second_rider.lower() == 'no':
+    if first_rider_age >= 18 and first_rider_height >= 62:
+        can_ride = True
+    else:
+        can_ride = False
+else:
+    print('Incorrect input, please start over.')
 
 if can_ride:
     print('Welcome to the ride. Please be safe and have fun!')
