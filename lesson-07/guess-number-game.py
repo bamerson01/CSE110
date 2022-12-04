@@ -2,12 +2,11 @@ import random
 
 play = 'yes'
 magic_number = -1
-best_score = 100
+best_score = 20
 
 while play.lower() == 'yes':
-    magic_number = random.randint(1, 100)
-    print(magic_number)
-    guess = int(input('Guess the magic number. Pick a number between 1-100: '))
+    magic_number = random.randint(1, 20)
+    guess = int(input('Guess the magic number. Pick a number between 1-20: '))
     guess_count = 1
 
     while guess != magic_number:
