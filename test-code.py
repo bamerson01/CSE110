@@ -1,11 +1,6 @@
+line = "     text"
 
-my_list = [5, 4, 7, 9, 2, 4]
-largest = 0
+line.strip()
 
-for value in my_list:
+print(line)
 
-    if value > largest:
-
-        largest = value
-
-print(f"The largest is {largest}")
