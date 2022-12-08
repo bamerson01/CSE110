@@ -11,6 +11,7 @@ chosen_max_expect = 0
 chosen_max_country = ''
 chosen_min_expect = 999.99
 chosen_min_country = ''
+selected_countries = []
 sum_life = 0
 line_count = 0
 
@@ -21,6 +22,9 @@ end_year = int(input('Enter the end year of interest: '))
 while add_country.lower() != 'all' or add_country.lower() != 'end':
     print('Please type the countries you would like to evaluate. Type ALL for all countries and END to finish')
     add_country = input(f'Country: ')
+    if add_country.lower() != 'end':
+        selected_countries.append(add_country)
+
 
 # Opens CSV data file and parses data into usable list format
 with open('life-expectancy.csv') as file:
