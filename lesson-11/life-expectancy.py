@@ -18,9 +18,6 @@ line_count = 0
 print('Please type which years you would like to evaluate.')
 start_year = int(input('Enter the start year of interest: '))
 end_year = int(input('Enter the end year of interest: '))
-while add_country.lower() != 'all' or add_country.lower() != 'end':
-    print('Please type the countries you would like to evaluate. Type ALL for all countries and END to finish')
-    add_country = input(f'Country: ')
 
 # Opens CSV data file and parses data into usable list format
 with open('life-expectancy.csv') as file:
@@ -67,12 +64,10 @@ with open('life-expectancy.csv') as file:
 # search_by = input(f'\n Search by:')
        
 
-print(f'\nThe overall maximum life expectancy is: {max_life:.2f} from {max_country} in {max_year}.')
-print(f'The overall minimum expectancy is: {min_life:.2f} from {min_country} in {min_year}.')
+print(f'\nThe overall maximum life expectancy was: {max_life:.2f} years from {max_country} in {max_year}.')
+print(f'The overall minimum expectancy was: {min_life:.2f} years from {min_country} in {min_year}.')
 print(f'\nFor the years {start_year} - {end_year}:')
-print(f'The average life expectancy across all countries was {chosen_avg_expect:.2f}')
-print(f'The max life expectancy is: {chosen_max_year} in {chosen_max_country} with {chosen_max_expect:.2f}')
-print(f'The min life expectancy is: {chosen_min_year} in {chosen_min_country} with {chosen_min_expect:.2f}')
+print(f'The average life expectancy across all countries was {chosen_avg_expect:.2f} years.')
+print(f'The max life expectancy was: the year {chosen_max_year} in {chosen_max_country} at {chosen_max_expect:.2f} years.')
+print(f'The min life expectancy was: {chosen_min_year} in {chosen_min_country} at {chosen_min_expect:.2f} years')
 print()
-print(sum_life)
-print(line_count)
